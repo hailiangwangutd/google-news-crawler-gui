@@ -1,2 +1,2 @@
 # googleNewsCrawler-GUI
-Very simple google news crawler. check how to use in the demo.gif. 
+Very simple google news crawler. Check how to use in the googleNewsDemo.gif
