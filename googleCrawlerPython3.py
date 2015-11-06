@@ -54,36 +54,6 @@ class googleNews:
                                                 artNum = int(artNum)
                                                 artNum += 1
 
-        def getGoogleNewsLinks(subsite, artNum, term):
-                time.sleep(15)
-                url = "http://www.google.com/search?q=" + term + "&tbs=sbd:1&tbm=nws&start=" + subsite
-                req = urllib.request.Request(url, headers=headers)
-                resp = urllib.request.urlopen(req)
-                soup = BeautifulSoup(resp, "lxml")
-                links = soup.findAll('div', attrs={'id': 'search'})
-                regex = "q=.*&sa"
-                pattern = re.compile(regex)
-                artTitle = []
-                if(links != []):
-                        links = links[0]
-                        links = links.findAll('li', attrs={'class':'g'})
-                        for l in links:
-                                time0 = l.findAll('span', attrs={'class':'f'})[0]
-                                time0 = time0.contents[0].strip()
-                                time1 = time0
-                                l = l.find('a')
-                                if(l != []):
-                                        l = l.get('href')
-                                        l = str(l)
-                                        l = re.findall(pattern, l)
-                                        if(l != []):
-                                                l = l[0][2:-3]
-                                                linkSet.append(l)
-                                                artNum = str(artNum)
-                                                getNewsContents(l, artNum, artTitle, time0, time1)
-                                                artNum = int(artNum)
-                                                artNum += 1
-
         def getNewsContents(url, artNum, artTitle, time0, time1):
             try:
                     a = Article(url, language='en')
