@@ -2,18 +2,11 @@ from tkinter import *
 from tkinter import ttk
 import urllib
 import urllib.request
+from newspaper import Article
+from fake_useragent import UserAgent
 from bs4 import BeautifulSoup 
 import re
 import time
-from newspaper import Article
-from fake_useragent import UserAgent
-import urllib
-import urllib.request
-from bs4 import BeautifulSoup 
-import re
-import time
-from newspaper import Article
-from fake_useragent import UserAgent
 import nltk
 from nltk import sent_tokenize, word_tokenize
 import datetime
