@@ -3,4 +3,4 @@ Very simple google news crawler. Based on python `BeautifulSoup`, `Article`, `tk
 
 To run the program, `cd` to the current repository, `python googleNewsGui.py`. Note: due to Google's frontend website changes, this may not work for latest version.
 
-![Alt text] (https://github.com/hailiangwangutd/google-news-crawler-gui/blob/master/googleNewsDemo.gif)
+![Alt text](https://github.com/hailiangwangutd/google-news-crawler-gui/blob/master/googleNewsDemo.gif)
